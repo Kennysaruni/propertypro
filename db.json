@@ -30,6 +30,51 @@
         "location": "Art District, City F",
         "image": "https://images.unsplash.com/photo-1628592102751-ba83b0314276?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGFwYXJ0bWVudHxlbnwwfHwwfHx8MA%3D%3D"
       }
+    ],
+    "maintenance" : [
+      { 
+        "unit": "201",
+        "description": "Light is out",
+        "priority" : "High",
+        "status": "Open",
+        "duedate": "12/4/2024"
+      },
+      { 
+        "unit": "202",
+        "description": "Shower not working",
+        "priority" : "High",
+        "status": "Open",
+        "duedate": "12/4/2024"
+      },
+      { 
+        "unit": "203",
+        "description": "Window is broken",
+        "priority" : "High",
+        "status": "Open",
+        "duedate": "12/4/2024"
+      },
+      { 
+        "unit": "204",
+        "description": "Sink is clogged",
+        "priority" : "High",
+        "status": "Open",
+        "duedate": "12/4/2024"
+      },
+      { 
+        "unit": "109",
+        "description": "Hot shower installation",
+        "priority" : "High",
+        "status": "Open",
+        "duedate": "12/4/2024"
+      },
+      { 
+        "unit": "254",
+        "description": "Socket blew up",
+        "priority" : "High",
+        "status": "Open",
+        "duedate": "12/4/2024"
+      }
     ]
+    
   }
   

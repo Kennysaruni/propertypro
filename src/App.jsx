@@ -31,19 +31,15 @@ import Navbar from "./components/Navbar/Navbar";
 import Sidemenu from "./components/Sidemenu/Sidemenu";
 import Listings from "./components/Listings/Listings";
 import "./App.css";
+import Owner from "./pages/Onwer/Owner";
+import Tenant from "./pages/Tenant/Tenant";
 
 function App() {
   return (
     <div>
       <Navbar />
-      <div className="a-listings">
-        <div className="sidemenu-container"> {/* Add sidemenu-container class here */}
-          <Sidemenu />
-        </div>
-        <div>
-          <Listings />
-        </div>
-      </div>
+      {/* <Owner/> */}
+      <Tenant/>
     </div>
   );
 }
