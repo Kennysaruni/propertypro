@@ -33,6 +33,7 @@ import Listings from "./components/Listings/Listings";
 import "./App.css";
 import Owner from "./pages/Onwer/Owner";
 import Tenant from "./pages/Tenant/Tenant";
+import Apartment from "./components/Apartment/Apartment";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
       <Navbar />
       {/* <Owner/> */}
       <Tenant/>
+      {/* <Apartment/> */}
     </div>
   );
 }

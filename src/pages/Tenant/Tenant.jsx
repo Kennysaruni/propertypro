@@ -2,6 +2,7 @@ import React from 'react'
 import TenantDashboard from '../../components/TenantDashboard/TenantDashboard'
 import Sidemenu from '../../components/Sidemenu/Sidemenu'
 import './Tenant.css'
+import Apartment from '../../components/Apartment/Apartment'
 
 function Tenant() {
   return (
@@ -11,7 +12,8 @@ function Tenant() {
           <Sidemenu />
         </div>
         <div>
-          <TenantDashboard/>
+          {/* <TenantDashboard/> */}
+          <Apartment/>
         </div>
       </div>
     </div>

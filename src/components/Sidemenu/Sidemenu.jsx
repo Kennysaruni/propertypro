@@ -9,7 +9,7 @@ function Sidemenu() {
         <div className='items'>Overview</div>
         <div className='items'>Lease</div>
         <div className='items'>Maintenance</div>
-        <div className='items'>Payments</div>
+        <div className='items'>Tenants</div>
         <div className='items'>Settings</div>
     </div>
 </div>
