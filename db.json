@@ -1,80 +1,88 @@
 {
-    "listings": [
-      {
-        "name": "Cozy Downtown Loft",
-        "location": "Downtown, City A",
-        "image": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXBhcnRtZW50fGVufDB8fDB8fHww"
-      },
-      {
-        "name": "Spacious Condo with a View",
-        "location": "Waterfront, City B",
-        "image": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YXBhcnRtZW50fGVufDB8fDB8fHww"
-      },
-      {
-        "name": "Modern Apartment near Park",
-        "location": "Greenfield, City C",
-        "image": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGFwYXJ0bWVudHxlbnwwfHwwfHx8MA%3D%3D"
-      },
-      {
-        "name": "Luxury Penthouse in Sky Towers",
-        "location": "Financial District, City D",
-        "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YXBhcnRtZW50fGVufDB8fDB8fHww"
-      },
-      {
-        "name": "Charming Studio in Historic District",
-        "location": "Old Town, City E",
-        "image": "https://images.unsplash.com/photo-1502672023488-70e25813eb80?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGFwYXJ0bWVudHxlbnwwfHwwfHx8MA%3D%3D"
-      },
-      {
-        "name": "Sleek Loft in Artsy Neighborhood",
-        "location": "Art District, City F",
-        "image": "https://images.unsplash.com/photo-1628592102751-ba83b0314276?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGFwYXJ0bWVudHxlbnwwfHwwfHx8MA%3D%3D"
-      }
-    ],
-    "maintenance" : [
-      { 
-        "unit": "201",
-        "description": "Light is out",
-        "priority" : "High",
-        "status": "Open",
-        "duedate": "12/4/2024"
-      },
-      { 
-        "unit": "202",
-        "description": "Shower not working",
-        "priority" : "High",
-        "status": "Open",
-        "duedate": "12/4/2024"
-      },
-      { 
-        "unit": "203",
-        "description": "Window is broken",
-        "priority" : "High",
-        "status": "Open",
-        "duedate": "12/4/2024"
-      },
-      { 
-        "unit": "204",
-        "description": "Sink is clogged",
-        "priority" : "High",
-        "status": "Open",
-        "duedate": "12/4/2024"
-      },
-      { 
-        "unit": "109",
-        "description": "Hot shower installation",
-        "priority" : "High",
-        "status": "Open",
-        "duedate": "12/4/2024"
-      },
-      { 
-        "unit": "254",
-        "description": "Socket blew up",
-        "priority" : "High",
-        "status": "Open",
-        "duedate": "12/4/2024"
-      }
-    ]
-    
-  }
-  
+  "listings": [
+    { "id": 1,
+      "name": "Cozy Downtown Loft",
+      "location": "Downtown, City A",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXBhcnRtZW50fGVufDB8fDB8fHww"
+        },
+        {
+          "url": "https://plus.unsplash.com/premium_photo-1683769252575-e986af039184?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGFwYXJ0bWVudHxlbnwwfHwwfHx8MA%3D%3D"
+        },
+        {
+          "url": "https://plus.unsplash.com/premium_photo-1684175656320-5c3f701c082c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGFwYXJ0bWVudHxlbnwwfHwwfHx8MA%3D%3D"
+        }
+      ]
+    },
+    {
+      "name": "Spacious Condo with a View",
+      "location": "Waterfront, City B",
+      "image": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YXBhcnRtZW50fGVufDB8fDB8fHww"
+    },
+    {
+      "name": "Modern Apartment near Park",
+      "location": "Greenfield, City C",
+      "image": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGFwYXJ0bWVudHxlbnwwfHwwfHx8MA%3D%3D"
+    },
+    {
+      "name": "Luxury Penthouse in Sky Towers",
+      "location": "Financial District, City D",
+      "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YXBhcnRtZW50fGVufDB8fDB8fHww"
+    },
+    {
+      "name": "Charming Studio in Historic District",
+      "location": "Old Town, City E",
+      "image": "https://images.unsplash.com/photo-1502672023488-70e25813eb80?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGFwYXJ0bWVudHxlbnwwfHwwfHx8MA%3D%3D"
+    },
+    {
+      "name": "Sleek Loft in Artsy Neighborhood",
+      "location": "Art District, City F",
+      "image": "https://images.unsplash.com/photo-1628592102751-ba83b0314276?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGFwYXJ0bWVudHxlbnwwfHwwfHx8MA%3D%3D"
+    }
+  ],
+  "maintenance": [
+    {
+      "unit": "201",
+      "description": "Light is out",
+      "priority": "High",
+      "status": "Open",
+      "duedate": "12/4/2024"
+    },
+    {
+      "unit": "202",
+      "description": "Shower not working",
+      "priority": "High",
+      "status": "Open",
+      "duedate": "12/4/2024"
+    },
+    {
+      "unit": "203",
+      "description": "Window is broken",
+      "priority": "High",
+      "status": "Open",
+      "duedate": "12/4/2024"
+    },
+    {
+      "unit": "204",
+      "description": "Sink is clogged",
+      "priority": "High",
+      "status": "Open",
+      "duedate": "12/4/2024"
+    },
+    {
+      "unit": "109",
+      "description": "Hot shower installation",
+      "priority": "High",
+      "status": "Open",
+      "duedate": "12/4/2024"
+    },
+    {
+      "unit": "254",
+      "description": "Socket blew up",
+      "priority": "High",
+      "status": "Open",
+      "duedate": "12/4/2024"
+    }
+  ]
+}

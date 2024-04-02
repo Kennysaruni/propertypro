@@ -34,14 +34,16 @@ import "./App.css";
 import Owner from "./pages/Onwer/Owner";
 import Tenant from "./pages/Tenant/Tenant";
 import Apartment from "./components/Apartment/Apartment";
+import ImageSlider from "./components/ImageSlider/ImageSlider";
 
 function App() {
   return (
     <div>
       <Navbar />
       {/* <Owner/> */}
-      <Tenant/>
+      {/* <Tenant/> */}
       {/* <Apartment/> */}
+      <ImageSlider/>
     </div>
   );
 }
