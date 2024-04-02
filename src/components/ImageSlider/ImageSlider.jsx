@@ -35,18 +35,18 @@ function ImageSlider() {
   };
 
   return (
-    <div className="max-w-[600px] h-[700px] w-full m-auto py-16 px-4 relative group ">
+    <div className="max-w-[600px] h-[500px] w-full m-auto py-16 px-4 relative group ">
       <div
         style={{ backgroundImage: `url(${slides[currentIndex]})` }}
-        className="w-[500px] h-[300px] rounded-2xl bg-center bg-cover duration-500 translate-x-8"
+        className="w-[505px] h-[300px] rounded-2xl bg-center bg-cover duration-500 translate-x-8"
       ></div>
       {/* Left Arrow */}
-      <div className=" hidden group-hover:block absolute top-[31%] -translate-x-0 translate-y-[-50%] left-12 text-2xl rounded-full p-2 text-black cursor-pointer ">
-        <BsChevronCompactLeft onClick={prevSlide} size={30} />
+      <div className=" hidden group-hover:block absolute top-[43%] -translate-x-0 translate-y-[-50%] left-12 text-2xl rounded-full  border-none p-2 text-black cursor-pointer ">
+        <BsChevronCompactLeft onClick={prevSlide} size={30} style={{backgroundColor: "transparent", border: "none"}} />
       </div>
       {/* Right Arrow */}
-      <div className="hidden group-hover:block absolute top-[31%] -translate-x-0 translate-y-[-50%] right-12 text-2xl rounded-full p-2 text-black cursor-pointer ">
-        <BsChevronCompactRight onClick={nextSlide} size={30} />
+      <div className="hidden group-hover:block absolute top-[43%] -translate-x-0 translate-y-[-50%] right-12 text-2xl  rounded-full p-2 text-black cursor-pointer ">
+        <BsChevronCompactRight onClick={nextSlide} size={30} style={{backgroundColor: "transparent", border: "none"}} />
       </div>
       <div className="flex top-4 justify-center py-2">
         {slides.map((slide, slideIndex) => (

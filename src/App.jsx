@@ -41,9 +41,9 @@ function App() {
     <div>
       <Navbar />
       {/* <Owner/> */}
-      {/* <Tenant/> */}
+      <Tenant/>
       {/* <Apartment/> */}
-      <ImageSlider/>
+      {/* <ImageSlider/> */}
     </div>
   );
 }
