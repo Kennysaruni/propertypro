@@ -1,8 +1,14 @@
 {
   "listings": [
-    { "id": 1,
+    {
+      "id": 1,
       "name": "Cozy Downtown Loft",
       "location": "Downtown, City A",
+      "type": "Apartment",
+      "status": "Available",
+      "unit_count": 1,
+      "lease_count": 1,
+      "balance": "$2000",
       "images": [
         {
           "url": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXBhcnRtZW50fGVufDB8fDB8fHww"
@@ -18,11 +24,21 @@
     {
       "name": "Spacious Condo with a View",
       "location": "Waterfront, City B",
+      "type": "Condo",
+      "status": "Available",
+      "unit_count": 2,
+      "lease_count": 2,
+      "balance": "$3000",
       "image": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YXBhcnRtZW50fGVufDB8fDB8fHww"
     },
     {
       "name": "Modern Apartment near Park",
       "location": "Greenfield, City C",
+      "type": "Apartment",
+      "status": "Available",
+      "unit_count": 1,
+      "lease_count": 1,
+      "balance": "$2500",
       "image": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGFwYXJ0bWVudHxlbnwwfHwwfHx8MA%3D%3D"
     },
     {
@@ -33,6 +49,7 @@
     {
       "name": "Charming Studio in Historic District",
       "location": "Old Town, City E",
+      "type" : "Apartment",
       "image": "https://images.unsplash.com/photo-1502672023488-70e25813eb80?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGFwYXJ0bWVudHxlbnwwfHwwfHx8MA%3D%3D"
     },
     {
@@ -83,6 +100,44 @@
       "priority": "High",
       "status": "Open",
       "duedate": "12/4/2024"
+    }
+  ],
+  "tenants": [
+    {
+      "name": "John Doe",
+      "unit_number": "101",
+      "lease_expiry_date": "2024-12-31",
+      "contact": "john.doe@example.com"
+    },
+    {
+      "name": "Jane Smith",
+      "unit_number": "102",
+      "lease_expiry_date": "2025-01-15",
+      "contact": "jane.smith@example.com"
+    },
+    {
+      "name": "Michael Johnson",
+      "unit_number": "103",
+      "lease_expiry_date": "2024-11-30",
+      "contact": "michael.johnson@example.com"
+    },
+    {
+      "name": "Emily Brown",
+      "unit_number": "104",
+      "lease_expiry_date": "2025-03-01",
+      "contact": "emily.brown@example.com"
+    },
+    {
+      "name": "David Wilson",
+      "unit_number": "105",
+      "lease_expiry_date": "2024-10-15",
+      "contact": "david.wilson@example.com"
+    },
+    {
+      "name": "Sarah Martinez",
+      "unit_number": "106",
+      "lease_expiry_date": "2025-02-28",
+      "contact": "sarah.martinez@example.com"
     }
   ]
 }

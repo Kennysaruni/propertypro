@@ -29,9 +29,14 @@
     font-size: 16;
     font-weight: 600;
 }
+
+.performance-number{
+    font-size: 30px;
+    font-weight: 800;
+}
 .table{
     border-radius: 12px;
-    border: 2px solid #F0F2F5;
+    border: 2px solid ;
     margin-top: 20px;
 }
 

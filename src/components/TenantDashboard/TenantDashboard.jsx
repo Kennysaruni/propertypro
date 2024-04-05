@@ -14,19 +14,19 @@ function TenantDashboard() {
 
   return (
     <div className="dash-container">
-      <h1>Dashboard</h1>
+      <h1 className='performance-number'>Dashboard</h1>
       <p className="welcome"> Welcome to your dashboard</p>
       <div className="performance-container">
         <div className="active-listings">Property Performance</div>
         <div className="performance">
           <div className="performance-items">
             <p className="performance-text"> Rent Collected</p>
-            <h1>$1500</h1>
+            <h1 className='performance-number'>$1500</h1>
             <img src={rentgraph} alt="rentgraph" className="" />
           </div>
           <div className="performance-items">
             <p className="performance-text"> Occupancy</p>
-            <h1>92%</h1>
+            <h1 className='performance-number'>92%</h1>
             <img src={occupancygraph} alt="Occupancy" className="" />
           </div>
         </div>

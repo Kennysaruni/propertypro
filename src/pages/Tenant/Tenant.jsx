@@ -12,8 +12,8 @@ function Tenant() {
           <Sidemenu />
         </div>
         <div>
-          {/* <TenantDashboard/> */}
-          <Apartment/>
+          <TenantDashboard/>
+          {/* <Apartment/> */}
         </div>
       </div>
     </div>
