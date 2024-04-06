@@ -3,6 +3,7 @@ import TenantDashboard from '../../components/TenantDashboard/TenantDashboard'
 import Sidemenu from '../../components/Sidemenu/Sidemenu'
 import './Tenant.css'
 import Apartment from '../../components/Apartment/Apartment'
+import Maintenance from '../../components/Maintenance/Maintenance'
 
 function Tenant() {
   return (
@@ -12,8 +13,9 @@ function Tenant() {
           <Sidemenu />
         </div>
         <div>
-          <TenantDashboard/>
+          {/* <TenantDashboard/> */}
           {/* <Apartment/> */}
+          <Maintenance/>
         </div>
       </div>
     </div>

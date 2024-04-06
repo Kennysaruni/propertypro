@@ -1,0 +1,109 @@
+.container {
+  width: 950px;
+  height: 100%;
+}
+
+.maintenance{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.search-input {
+  width: 950px;
+  height: auto;
+  display: flex;
+  margin-top: 20px;
+}
+
+.search {
+  height: 46px;
+  border-radius: 12px;
+  background-color: #dbe5e0;
+  padding-left: 40px;
+  width: 100%;
+  border: none;
+  font-size: 14px;
+}
+
+.search::placeholder {
+  color: #4f9661;
+}
+.search:focus {
+  border-color: transparent;
+  outline: none;
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px; /* Adjust the left position according to your preference */
+  transform: translateY(-50%);
+  width: 20px; /* Adjust the width and height of the icon as needed */
+  height: 20px;
+}
+
+.progress{
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+}
+
+.request-status{
+    font-weight: 700;
+    font-size: 17px;
+}
+.request{
+  display: flex;
+  margin: 20px auto;
+  flex-direction: row;
+}
+
+.requestname{
+  padding-left: 20px;
+  justify-content: flex-start;
+}
+
+.unit-no{
+  font-size: 13px;
+  color: #4f9661;
+}
+
+.add{
+  align-items: flex-end;
+  color: #121417;
+  justify-content: space-between;
+}
+
+.name{
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.completion-status{
+  padding-left: 65%;
+  font-size: 13px;
+  color: #4f9661;
+  padding-top: 7px;
+}
+.request-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 65%;
+}
+
+.complete-request{
+  width: 110px;
+  height: 32px;
+  background-color: #DBE5E0;
+  color: #121417;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 12px;
+  padding-bottom: 2.5px;
+  margin: 10px auto;
+}
+

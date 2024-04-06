@@ -8,7 +8,7 @@ function TenantsList() {
     fetch("http://localhost:3000/tenants")
       .then((res) => res.json())
       .then((promise) => setTenants(promise));
-  });
+  },[]);
   return (
     <div className="tenantslist">
       <h1 className="tenants-title">Tenants</h1>

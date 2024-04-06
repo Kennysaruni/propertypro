@@ -37,17 +37,18 @@ import Apartment from "./components/Apartment/Apartment";
 import ImageSlider from "./components/ImageSlider/ImageSlider";
 import Properties from "./components/Properties/Properties";
 import TenantsList from "./components/TenantsList/TenantsList";
+import Maintenance from "./components/Maintenance/Maintenance";
 
 function App() {
   return (
     <div>
       <Navbar />
       {/* <Owner/> */}
-      {/* <Tenant/> */}
+      <Tenant/>
       {/* <Apartment/> */}
       {/* <ImageSlider/> */}
       {/* <Properties/> */}
-      <TenantsList/>
+      {/* <TenantsList/> */}
     </div>
   );
 }
