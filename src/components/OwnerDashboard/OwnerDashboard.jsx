@@ -3,7 +3,7 @@ import "./TenantDashboard.css";
 import rentgraph from "../../assets/Rent.png";
 import occupancygraph from "../../assets/Occupancy.svg";
 
-function TenantDashboard() {
+function OwnerDashboard() {
   const [maintenances, setMaintenances] = useState([]);
 
   useEffect(() => {
@@ -66,4 +66,4 @@ function TenantDashboard() {
   );
 }
 
-export default TenantDashboard;
+export default OwnerDashboard;
