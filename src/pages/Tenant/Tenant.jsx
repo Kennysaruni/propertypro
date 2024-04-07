@@ -1,5 +1,5 @@
 import React from 'react'
-import TenantDashboard from '../../components/TenantDashboard/TenantDashboard'
+import OwnerDashboard from '../../components/OwnerDashboard/OwnerDashboard'
 import Sidemenu from '../../components/Sidemenu/Sidemenu'
 import './Tenant.css'
 import Apartment from '../../components/Apartment/Apartment'
@@ -13,7 +13,7 @@ function Tenant() {
           <Sidemenu />
         </div>
         <div>
-          {/* <TenantDashboard/> */}
+          {/* <OwnerDashboard/> */}
           {/* <Apartment/> */}
           <Maintenance/>
         </div>

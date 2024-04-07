@@ -1,0 +1,78 @@
+.lease-container{
+    width: 600px;
+    height: 100%;
+    /* background-color: black; */
+    margin: 0 auto;
+}
+
+.lease-agreement{
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.unit,.signed-on{
+    font-size: 13px;
+    color: #678317;
+}
+
+.terms-and-conditions,.special-provisions,.payment-schedule{
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+.terms-title{
+    font-size: 17px;
+    font-weight: 600;
+    color: #121714;
+}
+
+.terms-text{
+    padding: 20px auto;
+    font-size: 15px;
+    font-weight: 500;
+    color: #121714;
+}
+
+.note-better{
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-end;
+}
+
+.print{
+    width: 100px;
+    height: 32px;
+    border-radius: 12px;
+    color: #121714;
+    background-color: #DBE5E0;
+    margin-top: 10px;
+    padding-left: 34px;
+    padding-top: 5px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.download{
+    width: 100px;
+    height: 32px;
+    border-radius: 12px;
+    color: #121714;
+    background-color: #DBE5E0;
+    margin-top: 10px;
+    padding-left: 20px;
+    padding-top: 5px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+

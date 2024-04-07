@@ -1,7 +1,7 @@
 {
   "listings": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Cozy Downtown Loft",
       "location": "Downtown, City A",
       "type": "Apartment",
@@ -29,7 +29,8 @@
       "unit_count": 2,
       "lease_count": 2,
       "balance": "$3000",
-      "image": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YXBhcnRtZW50fGVufDB8fDB8fHww"
+      "image": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YXBhcnRtZW50fGVufDB8fDB8fHww",
+      "id": "c770"
     },
     {
       "name": "Modern Apartment near Park",
@@ -39,28 +40,32 @@
       "unit_count": 1,
       "lease_count": 1,
       "balance": "$2500",
-      "image": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGFwYXJ0bWVudHxlbnwwfHwwfHx8MA%3D%3D"
+      "image": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGFwYXJ0bWVudHxlbnwwfHwwfHx8MA%3D%3D",
+      "id": "a487"
     },
     {
       "name": "Luxury Penthouse in Sky Towers",
       "location": "Financial District, City D",
-      "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YXBhcnRtZW50fGVufDB8fDB8fHww"
+      "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YXBhcnRtZW50fGVufDB8fDB8fHww",
+      "id": "4ff9"
     },
     {
       "name": "Charming Studio in Historic District",
       "location": "Old Town, City E",
       "type": "Apartment",
-      "image": "https://images.unsplash.com/photo-1502672023488-70e25813eb80?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGFwYXJ0bWVudHxlbnwwfHwwfHx8MA%3D%3D"
+      "image": "https://images.unsplash.com/photo-1502672023488-70e25813eb80?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGFwYXJ0bWVudHxlbnwwfHwwfHx8MA%3D%3D",
+      "id": "d475"
     },
     {
       "name": "Sleek Loft in Artsy Neighborhood",
       "location": "Art District, City F",
-      "image": "https://images.unsplash.com/photo-1628592102751-ba83b0314276?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGFwYXJ0bWVudHxlbnwwfHwwfHx8MA%3D%3D"
+      "image": "https://images.unsplash.com/photo-1628592102751-ba83b0314276?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGFwYXJ0bWVudHxlbnwwfHwwfHx8MA%3D%3D",
+      "id": "75f5"
     }
   ],
   "maintenance": [
     {
-      "id": 1,
+      "id": "1",
       "unit": "201",
       "description": "Light is out",
       "priority": "High",
@@ -68,23 +73,15 @@
       "duedate": "12/4/2024"
     },
     {
-      "id": 2,
-      "unit": "202",
-      "description": "Shower not working",
-      "priority": "High",
-      "status": "In progress",
-      "duedate": "12/4/2024"
+      "status": "Closed",
+      "id": "2"
     },
     {
-      "id": 3,
-      "unit": "203",
-      "description": "Window is broken",
-      "priority": "High",
-      "status": "In progress",
-      "duedate": "12/4/2024"
+      "status": "Closed",
+      "id": "3"
     },
     {
-      "id": 4,
+      "id": "4",
       "unit": "204",
       "description": "Sink is clogged",
       "priority": "High",
@@ -92,7 +89,7 @@
       "duedate": "12/4/2024"
     },
     {
-      "id": 5,
+      "id": "5",
       "unit": "109",
       "description": "Hot shower installation",
       "priority": "High",
@@ -100,7 +97,7 @@
       "duedate": "12/4/2024"
     },
     {
-      "id": 6,
+      "id": "6",
       "unit": "254",
       "description": "Socket blew up",
       "priority": "High",
@@ -113,37 +110,43 @@
       "name": "John Doe",
       "unit_number": "101",
       "lease_expiry_date": "2024-12-31",
-      "contact": "john.doe@example.com"
+      "contact": "john.doe@example.com",
+      "id": "028b"
     },
     {
       "name": "Jane Smith",
       "unit_number": "102",
       "lease_expiry_date": "2025-01-15",
-      "contact": "jane.smith@example.com"
+      "contact": "jane.smith@example.com",
+      "id": "4b70"
     },
     {
       "name": "Michael Johnson",
       "unit_number": "103",
       "lease_expiry_date": "2024-11-30",
-      "contact": "michael.johnson@example.com"
+      "contact": "michael.johnson@example.com",
+      "id": "52c1"
     },
     {
       "name": "Emily Brown",
       "unit_number": "104",
       "lease_expiry_date": "2025-03-01",
-      "contact": "emily.brown@example.com"
+      "contact": "emily.brown@example.com",
+      "id": "272e"
     },
     {
       "name": "David Wilson",
       "unit_number": "105",
       "lease_expiry_date": "2024-10-15",
-      "contact": "david.wilson@example.com"
+      "contact": "david.wilson@example.com",
+      "id": "6d0b"
     },
     {
       "name": "Sarah Martinez",
       "unit_number": "106",
       "lease_expiry_date": "2025-02-28",
-      "contact": "sarah.martinez@example.com"
+      "contact": "sarah.martinez@example.com",
+      "id": "a35b"
     }
   ]
 }

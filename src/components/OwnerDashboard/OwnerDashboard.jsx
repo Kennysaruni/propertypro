@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./TenantDashboard.css";
+import "./OwnerDashboard.css";
 import rentgraph from "../../assets/Rent.png";
 import occupancygraph from "../../assets/Occupancy.svg";
 

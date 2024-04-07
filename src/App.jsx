@@ -10,18 +10,27 @@ import ImageSlider from "./components/ImageSlider/ImageSlider";
 import Properties from "./components/Properties/Properties";
 import TenantsList from "./components/TenantsList/TenantsList";
 import Maintenance from "./components/Maintenance/Maintenance";
+import TenantDashboard from "./components/TenantDashboard/TenantDashboard";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import OwnerDashboard from "./components/OwnerDashboard/OwnerDashboard";
+import Lease from "./components/Lease/Lease";
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      {/* <Owner/> */}
-      <Tenant/>
-      {/* <Apartment/> */}
-      {/* <ImageSlider/> */}
-      {/* <Properties/> */}
-      {/* <TenantsList/> */}
-    </div>
+    <BrowserRouter>
+      <div>
+        <Navbar />
+        <Lease/>
+        <Routes>
+          <Route path="/maintenance" element={<Maintenance />} />
+          <Route path='/dashboard' element={<OwnerDashboard/>}/>
+          <Route path='/listings' element={<Listings/>}/>
+          <Route path='/apartment' element={<Apartment/>}/>
+          <Route path='/properties' element={<Properties/>}/>
+
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
