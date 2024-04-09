@@ -45,7 +45,7 @@ function Maintenance() {
       .catch((error) => console.error("Error:", error));
   }
   return (
-    <div className="container">
+    <div className="m-container">
       <h1 className="maintenance">Maintenance</h1>
       <div className="search-input">
         <img

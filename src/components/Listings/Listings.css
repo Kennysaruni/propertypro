@@ -6,6 +6,12 @@ h1 {
     width: 950px;
     height: 500px;
     /* background-color: black; */
+    margin: 0 auto;
+}
+
+.listings-title{
+    font-size: 30px;
+    font-weight: 900;
 }
 
 .active-listings {

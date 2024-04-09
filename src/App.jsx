@@ -20,14 +20,14 @@ function App() {
     <BrowserRouter>
       <div>
         <Navbar />
-        <Lease/>
+        {/* <Lease/> */}
         <Routes>
           <Route path="/maintenance" element={<Maintenance />} />
           <Route path='/dashboard' element={<OwnerDashboard/>}/>
           <Route path='/listings' element={<Listings/>}/>
           <Route path='/apartment' element={<Apartment/>}/>
           <Route path='/properties' element={<Properties/>}/>
-
+          <Route path='/tenants' element={<TenantsList/>}/>
         </Routes>
       </div>
     </BrowserRouter>

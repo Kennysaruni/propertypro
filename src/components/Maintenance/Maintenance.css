@@ -1,6 +1,7 @@
-.container {
+.m-container {
   width: 950px;
   height: 100%;
+  margin: 0 auto;
 }
 
 .maintenance{

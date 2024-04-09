@@ -10,14 +10,17 @@ function Sidemenu() {
         <div className='items'>Overview
         <Link to='/dashboard'>Overview</Link>
         </div>
-        <div className='items'>Lease
-        
+        <div className='items'>Listings
+        <Link to='/listings'>Listings</Link>
         </div>
         <div className='items'>Maintenance
+        <Link to='/maintenance'>Maintenance</Link>
         </div>
         <div className='items'>Tenants
+        <Link to='/tenants'>Tenants</Link>
         </div>
-        <div className='items'>Settings
+        <div className='items'>
+        <Link to='/properties'>Properties</Link>
         </div>
     </div>
 </div>

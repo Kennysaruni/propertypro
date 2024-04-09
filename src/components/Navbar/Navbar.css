@@ -13,6 +13,7 @@
     background-color: #F0F5F2;
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
     
 }
 
@@ -26,7 +27,7 @@
     font-size: 0.9em;
     /* background-color: #0f4a9b; */
     padding-top: 25px;
-    margin-left: 42%;
+    /* margin-left: 42%; */
 }
 
 .nav-item{
@@ -50,7 +51,7 @@ a{
 }
 
 a:focus{
-    color: #1A80E5
+    color: #1ae54d;
 }
 
 .login{

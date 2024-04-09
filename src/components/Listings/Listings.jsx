@@ -14,7 +14,7 @@ function Listings() {
 
   return (
     <div className="listings-container">
-      <h1>Property Listings</h1>
+      <h1 className="listings-title">Property Listings</h1>
       <div className="active-listings">Active Listings</div>
       <div className="listings">
         {listings.map((listing) => {
