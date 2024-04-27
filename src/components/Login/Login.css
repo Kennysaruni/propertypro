@@ -1,0 +1,40 @@
+.form-container {
+  width: 500px;
+  height: 550px;
+  border-radius: 12px;
+  margin: 0 auto;
+  /* background-color: black; */
+  /* padding: 20 auto; */
+}
+
+.login-title{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.input-block {
+  display: block;
+  margin: 10px auto; /* Center the input blocks */
+  width: 452px;
+  height: 50px;
+  border-radius: 10px;
+  border: 0.5px solid grey;
+  padding-left: 20px;
+  background-color: white;
+}
+.submit {
+    display: block;
+    width: 452px;
+    height: 2.5em;
+    margin: 2.5em auto 1em auto;
+    border-radius: 10px;
+    border: none;
+    background-color: #1ae54d;
+    min-width: 300px;
+    color: white;
+    font-weight: 600;
+    font-family: Inter;
+    cursor: pointer;
+    
+  }
