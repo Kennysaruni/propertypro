@@ -4,18 +4,17 @@ import API_BASE_URL from "../../utilities/env";
 import { useNavigate } from "react-router";
 import { getJSONPayloadFromJwt, jwtLoginHandler } from "../../utilities/auth";
 
-function Login({ user, setUser }) {
+function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState([]);
 
   const navigate = useNavigate();
-  console.log(user)
 
   function loginSuccessCallback(token) {
     const userParams = getJSONPayloadFromJwt(token);
     if ("owner_id" in userParams) {
-      navigate("/listings");
+      navigate("/dashboard");
     } else if ("tenant_id" in userParams) {
       navigate("/tenant");
     }
@@ -27,15 +26,14 @@ function Login({ user, setUser }) {
   }
 
   const handleSubmit = async (e) => {
+    e.preventDefault()
     const loginRequestBody = {username,password}
     jwtLoginHandler(loginRequestBody, `${API_BASE_URL}/login`,loginSuccessCallback, loginFailureCallback)
   }
   return (
     <div className="form-container">
-      <h1>Welcome </h1>
       <h1 className="login-title">Log in</h1>
       <form onSubmit={handleSubmit}>
-        <h3>welcome </h3>
         <label htmlFor="username">
           {" "}
           Username

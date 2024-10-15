@@ -2,20 +2,43 @@ import React, { useEffect, useState } from "react";
 import "./OwnerDashboard.css";
 import rentgraph from "../../assets/Rent.png";
 import occupancygraph from "../../assets/Occupancy.svg";
+import { getJwtToken } from "../../utilities/auth";
 
-function OwnerDashboard() {
+function OwnerDashboard({ user }) {
   const [maintenances, setMaintenances] = useState([]);
+  const [profile, setProfile] = useState([])
+  const owner = profile.owner
 
   useEffect(() => {
-    fetch("http://localhost:3000/maintenance")
+    fetch('http://localhost:3000/profile',{
+      'method': 'GET',
+      'headers' : {
+        'Authorization' : `Bearer ${getJwtToken()}`,
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(res => res.json())
+    .then(data => setProfile(data))
+  },[])
+
+
+  
+  useEffect(() => {
+    fetch("http://localhost:3000/requests",{
+      method: 'GET',
+      headers: {
+        'Authorization': `Bearer ${getJwtToken()}`,
+        'Content-Type': 'application/json' 
+      }
+    })
       .then((response) => response.json())
       .then((data) => setMaintenances(data));
-  });
+  }, []);
 
   return (
     <div className="dash-container">
       {/* <h1 className='performance-number'>Dashboard</h1> */}
-      <p className="welcome"> Welcome back, Latimore</p>
+      <p className="welcome"> Welcome back, {owner.username}</p>
       <div className="performance-container">
         <div className="active-listings">Property Performance</div>
         <div className="performance">
@@ -64,9 +87,10 @@ function OwnerDashboard() {
             </thead>
             <tbody>
               {maintenances.map((maintenance) => {
+                const unit = maintenance.unit
                 return (
-                  <tr>
-                    <td>{maintenance.unit}</td>
+                  <tr key={maintenance.id}>
+                    <td>{unit.id}</td>
                     <td>{maintenance.description}</td>
                     <td>
                       <div className="status">{maintenance.priority}</div>

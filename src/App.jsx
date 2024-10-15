@@ -18,17 +18,22 @@ import Login from "./components/Login/Login";
 import { getJSONPayloadFromJwt, getJwtToken } from "./utilities/auth";
 
 function App() {
-  const [user,setUser] = useState(null)
+  const [user, setUser] = useState(null);
 
-  function syncUserState(){
-    const userParams = getJSONPayloadFromJwt(getJwtToken())
-    if ('owner_id' in userParams || 'tenant_id' in userParams){
-      setUser(userParams)
-    }
-    else{
+  function syncUserState() {
+    try {
+      const userParams = getJSONPayloadFromJwt(getJwtToken());
+      if ("owner_id" in userParams || "tenant_id" in userParams) {
+        setUser(userParams);
+      } else {
+        setUser(null);
+      }
+    } catch {
       setUser(null)
     }
   }
+
+  console.log(user)
 
   useEffect(syncUserState,[])
   return (
@@ -37,12 +42,12 @@ function App() {
         <Navbar user={user} setUser={setUser} />
         {/* <Lease/> */}
         {/* <TenantDashboard/> */}
-        <Login/>
+        {/* <Login /> */}
         <Routes>
           <Route path="/tenant" element={<TenantDashboard />} />
           <Route path="/maintenance" element={<Maintenance />} />
-          <Route path="/" element={<Login/>}/>
-          <Route path="/dashboard" element={<OwnerDashboard />} />
+          <Route path="/" element={<Login />} />
+          <Route path="/dashboard" element={<OwnerDashboard user={user}/>} />
           <Route path="/listings" element={<Listings />} />
           <Route path="/apartment" element={<Apartment />} />
           <Route path="/properties" element={<Properties />} />
