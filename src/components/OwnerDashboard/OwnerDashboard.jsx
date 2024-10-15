@@ -7,7 +7,6 @@ import { getJwtToken } from "../../utilities/auth";
 function OwnerDashboard({ user }) {
   const [maintenances, setMaintenances] = useState([]);
   const [profile, setProfile] = useState([])
-  const owner = profile.owner
 
   useEffect(() => {
     fetch('http://localhost:3000/profile',{
@@ -18,7 +17,8 @@ function OwnerDashboard({ user }) {
       }
     })
     .then(res => res.json())
-    .then(data => setProfile(data))
+    .then(data => setProfile(data.owner))
+    .catch(error => console.error('Error fetching profile', error))
   },[])
 
 
@@ -38,7 +38,7 @@ function OwnerDashboard({ user }) {
   return (
     <div className="dash-container">
       {/* <h1 className='performance-number'>Dashboard</h1> */}
-      <p className="welcome"> Welcome back, {owner.username}</p>
+      <p className="welcome"> Welcome back, {profile.username} </p>
       <div className="performance-container">
         <div className="active-listings">Property Performance</div>
         <div className="performance">
