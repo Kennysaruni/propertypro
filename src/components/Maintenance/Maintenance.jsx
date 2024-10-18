@@ -18,12 +18,11 @@ function Maintenance() {
     })
       .then((res) => res.json())
       .then((promise) => {
-        console.log('Fetched from API', promise)
-        setMaintenance(promise)
+        console.log("Fetched from API", promise);
+        setMaintenance(promise);
       })
       .catch((error) => console.error("Error", error));
   }, []);
-
 
   const newRequests = maintenance.filter(
     (request) => request.status === "Open"
@@ -32,7 +31,7 @@ function Maintenance() {
     (request) => request.status === "In Progress"
   );
   const completedRequests = maintenance.filter(
-    (request) => (request.status === "Closed")
+    (request) => request.status === "Closed"
   );
 
   const handleStart = (id) => {
@@ -74,6 +73,27 @@ function Maintenance() {
       })
       .catch((error) => console.error("Error:", error));
   }
+
+  const timeClosed = (updatedAt) => {
+    const now = new Date();
+    const updatedDate = new Date(updatedAt);
+    const diffInSeconds = Math.floor((now - updatedDate) / 1000);
+
+    const days = Math.floor(diffInSeconds / (3600 * 24));
+    const hours = Math.floor((diffInSeconds % (3600 * 24)) / 3600);
+    const minutes = Math.floor((diffInSeconds % 3600) / 60);
+
+    if (days > 0) {
+      return `${days} day${days > 1 ? "s" : ""} ago`;
+    } else if (hours > 0) {
+      return `${hours} hour${hours > 0 ? "s" : ""} ago`;
+    } else if (minutes > 0) {
+      return `${minutes} minute${minutes > 0 ? "s" : ""} ago`;
+    } else {
+      return "Just now";
+    }
+  };
+
   return (
     <div className="m-container">
       <h1 className="maintenance">Maintenance</h1>
@@ -107,7 +127,12 @@ function Maintenance() {
                   <p className="unit-no">Unit {request.unit.id}</p>
                 </div>
                 <div className="request-actions">
-                  <button className="complete-request" onClick={() => handleStart(request.id)}>Start</button>
+                  <button
+                    className="complete-request"
+                    onClick={() => handleStart(request.id)}
+                  >
+                    Start
+                  </button>
                 </div>
               </div>
             );
@@ -157,7 +182,7 @@ function Maintenance() {
                   <p className="name">{request.description}</p>
                   <p className="unit-no">Unit {request.unit.id}</p>
                 </div>
-                <p className="completion-status">3 days ago</p>
+                <p className="completion-status">{timeClosed(request.updated_at)}</p>
               </div>
             );
           })}
