@@ -3,33 +3,63 @@ import "./Maintenance.css";
 import searchlogo from "../../assets/icons8-search.svg";
 import plus from "../../assets/icons8-plus.svg";
 import wrench from "../../assets/wrench.svg";
+import { getJwtToken } from "../../utilities/auth";
 
 function Maintenance() {
   const [maintenance, setMaintenance] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/maintenance")
+    fetch(`http://localhost:3000/requests`, {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${getJwtToken()}`,
+        "Content-Type": "applocation/json",
+      },
+    })
       .then((res) => res.json())
-      .then((data) => setMaintenance(data));
+      .then((promise) => {
+        console.log('Fetched from API', promise)
+        setMaintenance(promise)
+      })
+      .catch((error) => console.error("Error", error));
   }, []);
 
-  console.log(maintenance)
 
   const newRequests = maintenance.filter(
     (request) => request.status === "Open"
   );
   const inProgressRequests = maintenance.filter(
-    (request) => request.status === "In progress"
+    (request) => request.status === "In Progress"
   );
   const completedRequests = maintenance.filter(
-    (request) => (request.filter = "Closed")
+    (request) => (request.status === "Closed")
   );
+
+  const handleStart = (id) => {
+    fetch(`http://localhost:3000/requests/${id}`, {
+      method: "PATCH",
+      headers: {
+        Authorization: `Bearer ${getJwtToken()}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ status: "In Progress" }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        const updatedMaintenance = maintenance.map((request) =>
+          request.id == id ? { ...request, status: "In Progress" } : request
+        );
+        setMaintenance(updatedMaintenance);
+      })
+      .catch((error) => console.error("Error", error));
+  };
 
   function handleComplete(id) {
     // Make a PUT request to update the status of the request to "Closed"
-    fetch(`http://localhost:3000/maintenance/${id}`, {
-      method: "PUT",
+    fetch(`http://localhost:3000/requests/${id}`, {
+      method: "PATCH",
       headers: {
+        Authorization: `Bearer ${getJwtToken()}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ status: "Closed" }),
@@ -74,10 +104,10 @@ function Maintenance() {
                 />
                 <div className="requestname">
                   <p className="name">{request.description}</p>
-                  <p className="unit-no">Unit {request.unit}</p>
+                  <p className="unit-no">Unit {request.unit.id}</p>
                 </div>
                 <div className="request-actions">
-                  <button className="complete-request" >Start</button>
+                  <button className="complete-request" onClick={() => handleStart(request.id)}>Start</button>
                 </div>
               </div>
             );
@@ -88,19 +118,24 @@ function Maintenance() {
         {inProgressRequests &&
           inProgressRequests.map((request) => {
             return (
-              <div className="request">
-                  <img
-                    src={wrench}
-                    alt="document-logo"
-                    className="w-[50px] h-[50px] rounded-2xl py-3.5 bg-black/20"
-                    style={{ backgroundColor: "#DBE5E0" }}
-                  />
+              <div className="request" key={request.id}>
+                <img
+                  src={wrench}
+                  alt="document-logo"
+                  className="w-[50px] h-[50px] rounded-2xl py-3.5 bg-black/20"
+                  style={{ backgroundColor: "#DBE5E0" }}
+                />
                 <div className="requestname">
                   <p className="name">{request.description}</p>
-                  <p className="unit-no">Unit {request.unit}</p>
+                  <p className="unit-no">Unit {request.unit.id}</p>
                 </div>
                 <div className="request-actions">
-                  <button className="complete-request" onClick={handleComplete(request.id)}>Complete</button>
+                  <button
+                    className="complete-request"
+                    onClick={() => handleComplete(request.id)}
+                  >
+                    Complete
+                  </button>
                 </div>
               </div>
             );
@@ -120,7 +155,7 @@ function Maintenance() {
                 />
                 <div className="requestname">
                   <p className="name">{request.description}</p>
-                  <p className="unit-no">Unit {request.unit}</p>
+                  <p className="unit-no">Unit {request.unit.id}</p>
                 </div>
                 <p className="completion-status">3 days ago</p>
               </div>
