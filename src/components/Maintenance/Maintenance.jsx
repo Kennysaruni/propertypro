@@ -26,13 +26,13 @@ function Maintenance() {
 
   const newRequests = maintenance.filter(
     (request) => request.status === "Open"
-  );
+  ).reverse();
   const inProgressRequests = maintenance.filter(
     (request) => request.status === "In Progress"
-  );
+  ).reverse();
   const completedRequests = maintenance.filter(
     (request) => request.status === "Closed"
-  );
+  ).reverse();
 
   const handleStart = (id) => {
     fetch(`http://localhost:3000/requests/${id}`, {
