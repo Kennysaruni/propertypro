@@ -66,10 +66,14 @@ function Navbar({ user, setUser }) {
             {/* <a href="/">Houses</a> */}
           </div>
           <div className="login">
+            <button className="sign-in" onClick={navigate('/createproperty')} >
+              Add Property
+            </button>
+          </div>
+          <div className="login">
             <button className="sign-in" onClick={navbarLogoutHandler}>
               Log Out
             </button>
-            {/* <button className="get-started">Get Started</button> */}
           </div>
         </div>
       </div>

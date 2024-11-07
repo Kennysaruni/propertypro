@@ -50,6 +50,7 @@ function App() {
           <Route path="/apartment" element={<Apartment />} />
           <Route path="/properties" element={<Properties />} />
           <Route path="/tenants" element={<TenantsList />} />
+          <Route path="/createproperty" element={<CreateProperty />} />
         </Routes>
       </div>
     </BrowserRouter>

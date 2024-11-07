@@ -69,6 +69,8 @@ a:focus{
     border-radius: 12px;
     font-weight: 800;
     border: none;
+    font-size: 13px;
+    
 }
 
 .get-started{

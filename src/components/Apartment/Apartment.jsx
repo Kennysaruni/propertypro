@@ -5,21 +5,10 @@ import documentLogo from "../../assets/icons8-document.svg";
 
 function Apartment() {
   const [clickedTab, setClickedTab] = useState(0); // Initialize with index 0 for Overview
-  const [images, setImages] = useState([]);
 
   const handleTabClick = (tabIndex) => {
     setClickedTab(tabIndex);
   };
-
-  useEffect(() => {
-    fetch("http://localhost:3000/listings")
-      .then((res) => res.json())
-      .then((data) => setImages(data[0].images));
-  }, []);
-
-  console.log(images);
-  const userImage =
-    "https://images.unsplash.com/photo-1687319000074-90e2048df2f8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGRpc3BsYXklMjBwcm9maWxlfGVufDB8fDB8fHww";
 
   return (
     <div className="apt-container">
