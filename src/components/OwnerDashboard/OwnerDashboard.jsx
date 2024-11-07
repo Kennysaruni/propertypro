@@ -70,6 +70,10 @@ function OwnerDashboard() {
     fetchRequests();
   }, []);
 
+  if(!user){
+    return ("You are not logged in")
+  }
+
   return (
     <div className="dash-container">
       <p className="welcome"> Welcome back, {profile.username} </p>
