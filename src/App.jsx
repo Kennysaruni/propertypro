@@ -41,11 +41,7 @@ function App() {
     <BrowserRouter>
       <div>
         <Navbar user={user} setUser={setUser} />
-        <CreateProperty/>
-        {/* <Lease/> */}
-        {/* <TenantDashboard/> */}
-        {/* <Login /> */}
-        {/* <Routes>
+        <Routes>
           <Route path="/tenant" element={<TenantDashboard />} />
           <Route path="/maintenance" element={<Maintenance />} />
           <Route path="/" element={<Login />} />
@@ -54,7 +50,7 @@ function App() {
           <Route path="/apartment" element={<Apartment />} />
           <Route path="/properties" element={<Properties />} />
           <Route path="/tenants" element={<TenantsList />} />
-        </Routes> */}
+        </Routes>
       </div>
     </BrowserRouter>
   );
