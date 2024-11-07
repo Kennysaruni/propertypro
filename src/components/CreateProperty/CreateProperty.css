@@ -1,0 +1,63 @@
+.property-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 30px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.property-input {
+    padding: 10px;
+    font-size: 13px;
+    border: 0.5px solid #ccc;
+    border-radius: 12px;
+    max-width: 50%;
+    height: 45px;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.property-input:focus {
+    border-color: #1ae54d;
+    background-color: white;
+    outline: none;
+}
+
+.property-input[type="file"] {
+    padding: 3px;
+}
+
+.submit-button {
+    padding: 12px;
+    font-size: 16px;
+    color: white;
+    background-color: #1ae54d;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    width: 50%;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
